@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-image:   url("https://acm.vvitguntur.com/images/acm2023-24/acm_officers/slide/49562779412.png");
+background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height:100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:aqua;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            text-align: right;
+            font-weight: bold;
+            grid-column: 1;
+            grid-row: auto;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            grid-column: 2;
+            grid-row: auto;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            grid-column: span 2;
+            grid-row: auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        #button5{position: fixed;
+    padding: 10px;
+    top:20px;
+    left:20px;
+    background-color:skyblue; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 1px;
+border:none;
+cursor:pointer;
+}
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form action="Feedback.php" method="post">
+        <label for="StudentID">Student ID:</label>
+        <input type="text" id="StudentID" name="StudentID" placeholder="Enter your student ID" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your feedback here" required></textarea>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" placeholder="Enter your rating (1-5)" min="1" max="5" required>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+<div id="button5">
+        <a href="http://localhost/orgtemplate.html" class="back-button">Back</a>
+    </div>
+    <footer>
+        <h4>For more details,visit our websites</h4>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   
+      <div class="wrapper">
+         <div class="dot">
+            <div class="icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <span><a href="http://www.facebook.com/acmvvit.1/" style="text-decoration:none; color: #4267B2">Facebook</a></span>
+         </div>
+         <div class="dot">
+            <div class="icon">
+               <i class="fab fa-twitter"></i>
+            </div>
+            <span><a href="http://twitter.com/AcmVvit?s=08/" style="text-decoration:none; color:#1da1f2;">Twitter</a></span>
+         </div>
+         <div class="dot">
+            <div class="icon">
+               <i class="fab fa-instagram"></i>
+            </div>
+            <span><a href="http://www.instagram.com/acm_vvit/" style="text-decoration:none; color: #E1306C;">Instagram</a></span>
+         </div>
+         
+      </div>
+    </footer>
+      
+         <script>
+
+   const showMenu = (toggleId, navId) =>{
+      const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId)
+      toggle.addEventListener('click', () =>{
+          nav.classList.toggle('show-menu')
+          toggle.classList.toggle('show-icon')
+      })
+   }  
+   showMenu('nav-toggle','nav-menu')
+         </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="logininside.css">
+</head>
+<body>
+  <header>
+    <h1>REGISTRATION FOR CODEATHON</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section class="feedback">
+      <h2>Your Feedback</h2>
+      <form action="/feedback" method="post">
+        <label for="name">Your Name (Optional):</label>
+        <input type="text" id="name" name="name">
+        <label for="feedback">Tell us what you think:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <section class="event-details">
+      <h2>Event Details</h2>
+      <p>Event Name: Placeholder Event</p>
+      <p>Date: Placeholder Date</p>
+      <p>Time: Placeholder Time</p>
+      <p>Location: Placeholder Location</p>
+      <a href="#">Register Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Your Website Name</p>
+  </footer>
+
+</body>
+</html>
