@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 // Function to validate user credentials
 function validateUser($username, $password, $conn) {
-    $sql = "SELECT * FROM registration_users WHERE username = '$username' AND password = '$password'";
+    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate user credentials
     if (validateUser($username, $password, $conn)) {
-        header("Location: loginwindow.html");
+        header("Location: Adminpage.html");
         // Add additional logic (e.g., session management) for successful login
     } else {
         echo '<script>alert("Invalid password or the username");</script>';

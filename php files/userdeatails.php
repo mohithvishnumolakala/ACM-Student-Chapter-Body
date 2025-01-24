@@ -1,7 +1,7 @@
- <?php 
+<?php 
 
-    require_once("Feedbackdataconn.php");
-    $query = " select * from feedback_table";
+    require_once("registrationconn.php");
+    $query = " select * from registration_users";
     $result = mysqli_query($con,$query);
 
 ?>
@@ -82,7 +82,7 @@
             text-decoration: none; 
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,42 +92,44 @@
 </head>
 <body class="bg-dark">
 <header class="header">
-        <h1> Student Feedback Details</h1>
+        <h1> Student Details</h1>
         <div class="top-section">
-            <a href="http://localhost/loginwindow.html" class="home-link"><i class="ri-home-line"></i> Home</a> 
+            <a href="http://localhost/Adminpage.html" class="home-link"><i class="ri-home-line"></i> Home</a> 
             <a href="login.html" class="logout-link"><i class="ri-login-box-line"></i> Logout</a> 
         </div>
     </header>
-    <div class="container">
+             
+        
+<div class="container">
             <div class="row">
-                
+                <class="col m-auto">
                     
                         <table class="table table-bordered">
                             <tr>
-                                <td > <b>StudentID</b> </td>
-                                <td> <b>EventName</b>  </td>
-                                <td><b>Message</b>   </td>
-                                <td><b>Rating</b>  </td>
+                                <td> UserName </td>
+                                <td> Name </td>
+                                
+                               
                                 
                                 
+                               
                             </tr>
 
                             <?php 
                                     
                                     while($row=mysqli_fetch_assoc($result))
                                     {
-                                        $UserID = $row['StudentId'];
-                                        $UserName = $row['EventName'];
-                                        $UserEmail = $row['message'];
-                                        $UserAge = $row['Rating'];
+                                        $UserID = $row['Username'];
+                                        $Name=$row['Name'];
+                                        
+                                       
                             ?>
                                     <tr>
                                         <td><?php echo $UserID ?></td>
-                                        <td><?php echo $UserName ?></td>
-                                        <td><?php echo $UserEmail ?></td>
-                                        <td><?php echo $UserAge ?></td>
+                                        <td><?php echo $Name ?></td>
                                        
                                         
+                                       
                                     </tr>        
                             <?php 
                                     }  
@@ -140,7 +142,7 @@
             </div>
         </div>
 
-       
+        
     
 </body>
 </html>

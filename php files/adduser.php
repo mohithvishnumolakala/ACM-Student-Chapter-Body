@@ -1,4 +1,7 @@
 <?php
+$Name= $_POST['name'];
+$Year= $_POST['year'];
+$Branch= $_POST['branch'];
 $Username = $_POST['username'];
 $Password = $_POST['password'];
 
@@ -15,9 +18,9 @@ if (!$connection) {
     die("Connection error: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO registration(Username,Password) VALUES (?, ?)";
+$sql = "INSERT INTO registration_users(Name,Year,Branch,Username,Password) VALUES (?,?,?,?,?)";
 $statement = mysqli_prepare($connection, $sql);
-mysqli_stmt_bind_param($statement, "ss", $Username,$Password);
+mysqli_stmt_bind_param($statement, "sssss",$Name,$Branch,$Year,$Username,$Password);
 
 if (mysqli_stmt_execute($statement)) {
     echo "User Added successfully!";
