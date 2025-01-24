@@ -1,22 +1,29 @@
+.background-image{
+  margin:0;
+  padding:0;
+  background:url("https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 95vh;  
+ }
+ #marquee{
+  top:180px;left:50px;
+  right:50px;
+   margin-top: 40px;
+   background:blur;
+   font-size:35px;
+  color:aliceblue;
+   font-weight: 100px;
+   height:50px;
+   behavior: "scroll";
+ }
 
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-  height:675px;
-  background-color: #579eca;
-}
-.slider-image {
-  width: 100%;
-  display: flex;
-height:665px;
-}
-.motto{
+ .motto{
   border-radius:30px 10px;
   background:-webkit-linear-gradient(left top,aliceblue,#63b1e0);
      background:-o-linear-gradient(bottom right,aliceblue,#63b1e0);
      background:-moz-linear-gradient(bottom right,aliceblue,#63b1e0);
      background:linear-gradient(to bottom right,aliceblue,#63b1e0);
-  position: absolute;
+  margin-left:500px;
   width:500px;
   height:200px;
   padding:60px;
@@ -26,8 +33,10 @@ height:665px;
   font-family:math;
   animation:float 5s infinite;
   line-height:30px;
-  overflow:visible;
+  margin-top: 300px;
+  margin-left:870px ;
   }
+  
   
 @keyframes float {
   0% {
@@ -223,7 +232,7 @@ a {
 }
 .dropdown__link, 
 .dropdown__sublink {
-  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  padding: 10px;
   color: black;
   background-color: white;
   display: flex;
@@ -422,7 +431,7 @@ footer{
   margin-top:100px;
   margin-left:100px;
   width: 90%;
-  height: 75vh; 
+  height: 60vh; 
      
 }
 h1{
@@ -465,7 +474,7 @@ h4{
   padding-left: 20px;
 
 }
-.image-container {
+.image-container,.image-container2 {
     display: flex;
     width:800px;
     padding:30px;
@@ -473,7 +482,7 @@ h4{
     margin-left:350px;
     border-radius:20px;
 }
-.image-container img{
+.image-container img,.image-container2 img{
    width: 150px;
     height: 150px;
     border: 2px solid #ddd;
