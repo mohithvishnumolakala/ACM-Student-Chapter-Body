@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Admin Dashboard - ACM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color:skyblue;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+			margin-bottom:120px;
+        }
+        .container {
+           height: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .dashboard-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+			margin-right:150px;
+        }
+        .option-card {
+            height: 200px;
+            flex: 0 0 calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-right:20px; 
+			margin-left:10px;
+        }
+        .option-card h2 {
+            margin-top: -10px;
+            font-size: 18px;
+			margin-bottom:20px;
+        }
+        .top-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .top-section a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s ease;
+            margin-right: 10px; 
+        }
+        .top-section a:hover {
+            background-color: #333;
+        }
+		.top-section a.no-underline {
+            text-decoration: none;
+        }
+        .option-card a.no-underline {
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Dashboard - ACM</h1>
+        <div class="top-section">
+            
+            <a href="http://localhost/Adminpage.html" class="home-link"><i class="ri-home-line"></i> Home</a> 
+            <a href="http://localhost/userdeatails.php" class="home-link"><i class="ri-home-line"></i> User-details</a> 
+            
+            <a href="http://localhost/login.html" class="logout-link"><i class="ri-login-box-line"></i> Logout</a> 
+        </div>
+    </header>
+
+    <div class="container"  style="background-color: #003366;">
+        
+        <div class="dashboard-options" >
+            <div class="option-card" style="background-color:yellow;">
+                <h2>User Registration</h2>
+           
+                <a href="http://localhost/Adduser.html" class="no-underline"> <i class="ri-calendar-check-line"></i> AddUser</a>
+                
+                <br><br><a href="http://localhost/Deleteuser.html" class="no-underline"> <i class="ri-calendar-check-line"></i> DeleteUser</a>
+            </div>
+            <div class="option-card" style="background-color:yellow;">
+                <h2>Events</h2>
+           
+                <a href="http://localhost/Eventsinside.html" class="no-underline"> <i class="ri-calendar-check-line"></i> View</a>
+            </div>
+            <div class="option-card"  style="background-color:lightpink;">
+                <h2>Feedback</h2>
+       
+                <a href="http://localhost/Feedbackdata.php" class="no-underline"> <i class="ri-chat-1-line"></i> View</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
